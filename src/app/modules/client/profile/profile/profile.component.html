@@ -1,0 +1,30 @@
+<div [ngClass]="{'overlay-background-visible': !overview}" class="overlay-background"></div>
+
+<nav class="component-menu">
+
+    <ul>
+
+        <li><a (click)="changeBannerVisible(true); playSound('submenuClick')" routerLinkActive="item-menu-active" routerLink="overview">Overview</a></li>
+        <li><a (click)="changeBannerVisible(false); playSound('submenuClick')" routerLinkActive="item-menu-active" routerLink="match-history">Match History</a></li>
+
+    </ul>
+
+</nav>
+
+<div [ngClass]="{'banner-visible': overview}" class="banner">
+    <div id='playerBanner' class="banner">
+        <div class="player-informations">
+            <span class="player-name">{{ player.name }}</span>
+            <img class="rank-image" src="./assets/images/aside-icons/platina.png">
+            <span class="rank-tier">II</span>
+            <img class="profile-image" src="{{ player.picture }}">
+        </div>
+        <img src="./assets/images/lobby/banner.png">
+    </div>
+</div>
+
+<div class="content">
+
+    <router-outlet></router-outlet>
+
+</div>

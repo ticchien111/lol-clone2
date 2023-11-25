@@ -1,0 +1,413 @@
+.container {
+
+    background-image: url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7225731dfb1a126a/60249b80f4a7946af0338313/LoL-Patch-Notes-11-4-Article-Banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+    .video-background {
+        
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+
+    }
+
+    aside {
+
+        background-color: #ffffffea;
+        border-right: 2px solid #ffffff44;
+        width: 400px;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        animation: FadeInLeft 1s forwards;
+
+        @keyframes FadeInLeft {
+            
+            0%{
+
+                transform: translateX(-400px);
+
+            }
+            100% {
+
+                opacity: 1;
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .logo {
+
+            display: block;
+            margin-bottom: 4rem;
+
+        }
+
+        span {
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+
+        }
+
+        form {
+
+            position: relative;
+            margin: 0;
+
+            input {
+
+                width: 100%;
+                height: 58px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: 900;
+                letter-spacing: 1px;
+                background-color: #ededed;
+                border: 2px solid #ededed;
+                border-radius: 8px;
+                padding: 14px 16px 4px;
+                box-sizing: border-box;
+
+                &:focus {
+
+                    border: 2px solid black;
+                    background-color: transparent;
+
+                }
+
+                &:focus + label {
+
+                    transform: scale(.6);
+                    top: 7px;
+                    left: -10px;
+    
+                }
+    
+            }
+
+            .label-top {
+
+                transform: scale(.6);
+                top: 7px;
+                left: -10px;
+
+            }
+    
+            label {
+    
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                position: absolute;
+                top: 22px;
+                left: 16px;
+                transition-duration: .2s;
+                opacity: .6;
+    
+            }
+
+            small {
+                
+                font-family: 'Roboto', sans-serif;
+                color: #fd0352;
+                margin-bottom: 8rem;
+                font-size: 14px;
+                width: 300px;
+                display: block;
+                margin-top: 14px;
+                text-align: center;
+
+            }
+
+            button {
+
+                width: 80px;
+                height: 80px;
+                border: 2px solid #f2f2f2;
+                border-radius: 16px;
+                background-color: #ededed;
+                transition-duration: .2s;
+                cursor: not-allowed;
+
+            }
+
+            .button-enabled {
+
+                background-color: #d13639;
+                border-color: #d13639;
+
+                &:hover {
+
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    filter: brightness(150%);
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.modal-close {
+
+    opacity: 0 !important;
+    transform: scale(.5) !important;
+
+}
+
+.modal {
+
+    color: white;
+    background-color: #030619d4;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #c7974a80;
+    border-radius: 16px;
+    box-sizing: border-box;
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transition-duration: .5s;
+    animation: FadeIn .5s forwards;
+    overflow: auto;
+
+    @keyframes FadeIn {
+        
+        0% {
+
+            transform: scale(.5);
+
+        }
+        100% {
+
+            opacity: 1;
+            transform: scale(1);
+
+        }
+
+    }
+
+    img {
+
+        padding-top: 20px;
+        width: 200px;
+        animation: OwwntZed 2s infinite;
+
+        @keyframes OwwntZed {
+            
+            0% {
+
+                transform: scale(.95);
+
+            }
+            50% {
+
+                transform: scale(1);
+                filter: brightness(120%);
+
+            }
+            100% {
+
+                transform: scale(.95);
+
+            }
+
+        }
+
+    }
+
+    h1 {
+
+        color: #c7984a;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        b {
+
+            color: #fd0352;
+
+        }
+
+    }
+
+    h2 {
+
+        font-size: 1.2rem;
+        margin: 1rem 0;
+
+    }
+
+    p {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        width: 500px;
+        margin-top: 2rem;
+        text-align: justify;
+
+        b {
+
+            color: #fd0352;
+            font-weight: bold;
+
+        }
+
+    }
+
+    button {
+
+        color: #ffffff80;
+        background-color: #fd035207;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border: 2px solid #fd03521c;
+        margin-top: 4rem;
+        padding: 1rem 4rem;
+        border-radius: 16px;
+        transition-duration: .2s;
+        margin-bottom: 20px;
+        cursor: pointer;
+        
+        &:hover {
+            
+            color: #ffffff;
+            background-color: #fd0352;
+            box-shadow: 0 0 20px #fd03527c;
+            transform: scale(1.1);
+
+        }
+
+    }
+
+}
+
+.warning-visible {
+
+    top: 2rem !important;
+    opacity: 1 !important;
+
+}
+
+.warning {
+
+    position: fixed;
+    top: -14rem;
+    left: calc(50% - 311px);
+    z-index: 2;
+    background-color: #c7bf4a58;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    border-radius: 16px;
+    border: solid 2px #fd03521c;
+    transition-duration: .5s;
+    opacity: 0;
+
+    img {
+        
+        width: 150px;
+        display: inline-block;
+        animation: TwistedFateHeadBanger 2s infinite;
+
+        @keyframes TwistedFateHeadBanger {
+            
+            0% {
+
+                transform: rotate(6deg);
+
+            }
+            50% {
+
+                transform: rotate(-6deg);
+                filter: brightness(120%);
+
+            }
+            100% {
+
+                transform: rotate(6deg);
+
+            }
+
+        }
+    
+    }
+
+    .text-wrapper {
+
+        display: inline-block;
+        text-align: center;
+
+        h1 {
+
+            color: #e2db71;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-bottom: 1rem;
+            display: block;
+
+        }
+
+        h2 {
+
+            color: #c7bf4a;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-bottom: 1rem;
+            display: block;
+
+        }
+
+        p {
+
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            margin-left: 2rem;
+
+            b {
+
+                color: #00000052;
+                font-weight: bold;
+
+            }
+
+        }
+
+    }
+
+}

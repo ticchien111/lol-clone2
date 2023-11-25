@@ -1,0 +1,523 @@
+.video-background {
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scale(1.8);
+
+}
+
+.back-home {
+
+    right: 1rem !important;
+    opacity: 1;
+
+}
+
+a {
+
+    color: #938f83;
+    background-color: #1e2328;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border: 2px solid #c8aa6d;
+    transition-duration: 0.2s;
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+    transition-duration: 1s;
+    bottom: 1rem;
+    right: -12rem;
+    opacity: 0;
+
+    &:hover {
+
+        transform: scale(1.1);
+        filter: brightness(120%);
+
+    }
+
+}
+
+.container {
+
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    background: rgb(0,224,255);
+    background: linear-gradient(180deg, rgba(0, 225, 255, 0.200) 0%, rgba(135,105,139,0) 50%, rgba(255,0,36,0.200) 100%);
+    overflow: hidden;
+
+    .teams {
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition-duration: .2s;
+
+        .team {
+
+            color: white;
+            font-size: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem 0;
+
+        }
+
+        li {
+
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border: solid 2px #88652b;
+            width: 250px;
+            margin: 0 1rem;
+            transition-duration: .5s;
+            transform: scale(1);
+            opacity: 0;
+
+            .wrapper {
+
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .informations {
+
+                width: 100%;
+                height: 510px;
+                background: rgb(255,0,36);
+                background: linear-gradient(180deg, #ff002400 0%, #000000a8 30%);
+                margin-top: 282px;
+                text-align: center;
+                position: relative;
+                transition-duration: .5s;
+
+                .profile-image {
+
+                    display: block;
+                    width: 50px;
+                    margin: .8rem auto 4px;
+                    border-radius: 50%;
+                    border: 2px solid #c69f43;
+
+                }
+
+                .player-name {
+
+                    font-size: 14px;
+                    padding-top: 12px;
+
+                }
+
+                .current-player {
+
+                    color: #c69f43;
+
+                }
+
+                .summoners-spells {
+
+                    position: absolute;
+                    top: 42px;
+                    left: 2px;
+
+                    img {
+
+                        width: 34px;
+                        margin: 0 .2rem;
+                        border: 2px solid #6464627c;
+                        box-sizing: border-box;
+
+                    }
+
+                }
+
+                .runes {
+
+                    position: absolute;
+                    top: 30px;
+                    right: -14px;
+
+                    img {
+
+                        background-color: #000000b9;
+                        border-radius: 50%;
+                        border: 2px solid #c69f43;
+                        padding: 2px;
+
+                    }
+
+                    .primary-rune {
+
+                        width: 40px;
+                        position: relative;
+                        z-index: 1;
+
+                    }
+
+                    .secondary-rune {
+
+                        width: 25px;
+                        position: relative;
+                        z-index: 2;
+                        top: 10px;
+                        left: -20px;
+
+                    }
+
+
+                }
+
+                &::before {
+
+                    content: '';
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 0;
+                    background-image: url('./../../../../../assets/images/loading-screen/loading-screen-detail.png');
+                    width: 85px;
+                    height: 15px;
+
+                }
+
+                &::after {
+
+                    content: '';
+                    position: absolute;
+                    top: 1.2rem;
+                    right: 0;
+                    background-image: url('./../../../../../assets/images/loading-screen/loading-screen-detail.png');
+                    width: 85px;
+                    height: 15px;
+                    transform: rotateY(180deg);
+
+                }
+
+                .rank {
+
+                    img {
+                    
+                        padding-top: 32px;
+                        width: 160px;
+                    }
+
+                    span {
+
+                        color: #ffffffad;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        display: block;
+
+                    }
+
+                    .tier {
+
+                        font-size: 18px;
+
+                    }
+
+                    .lp {
+
+                        padding-top: 12px;
+                        font-size: 14px;
+
+                    }
+
+                }
+
+                .maestry {
+
+                    img {
+                    
+                        padding-top: 32px;
+                        width: 60px;
+                    
+                    }
+
+                    .points {
+
+                        color: #ffffffad;
+                        font-size: 12px;
+                        display: block;
+
+                    }
+
+                }
+
+            }
+
+            &:hover {
+
+                transform: scale(1.1) !important;
+                box-shadow: 0 0 60px rgba(0, 0, 0, 0.500);
+
+                .informations {
+
+                    transform: translateY(-390px);
+
+                }
+
+            }
+
+        }
+
+        .blue-team {
+
+            position: relative;
+            left: -12px;
+
+            li {
+
+                animation: FadeInDown 1s forwards;
+                position: relative;
+
+                @keyframes FadeInDown {
+                    
+                    0% {
+
+                        opacity: 0;
+                        top: -80px;
+
+                    }
+                    100% {
+
+                        opacity: 1;
+                        top: 0;
+
+                    }
+
+                }
+
+                &:nth-child(2) {
+
+                    animation-delay: .2s;
+
+                }
+
+                &:nth-child(3) {
+
+                    animation-delay: .3s;
+
+                }
+
+                &:nth-child(4) {
+
+                    animation-delay: .4s;
+
+                }
+
+                &:nth-child(5) {
+
+                    animation-delay: .5s;
+
+                }
+
+                &::after {
+
+                    content: '';
+                    background-image: url('./../../../../../assets/images/loading-screen/border-detail.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 250px;
+                    height: 15px;
+                    position: absolute;
+                    bottom: -15px;
+
+                }
+
+            }
+
+        }
+
+        .red-team {
+
+            position: relative;
+            right: -12px;
+
+            li {
+
+                animation: FadeInUp 1s forwards;
+                position: relative;
+
+                @keyframes FadeInUp {
+                    
+                    0% {
+
+                        opacity: 0;
+                        bottom: -80px;
+
+                    }
+                    100% {
+
+                        opacity: 1;
+                        bottom: 0;
+
+                    }
+
+                }
+
+                &:nth-child(1) {
+
+                    animation-delay: .5s;
+
+                }
+
+                &:nth-child(2) {
+
+                    animation-delay: .4s;
+
+                }
+
+                &:nth-child(3) {
+
+                    animation-delay: .3s;
+
+                }
+
+                &:nth-child(4) {
+
+                    animation-delay: .2s;
+
+                }
+
+                &::after {
+
+                    content: '';
+                    background-image: url('./../../../../../assets/images/loading-screen/border-detail.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 250px;
+                    height: 15px;
+                    position: absolute;
+                    top: -15px;
+                    transform: rotateX(160deg);
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.two-hundred-sixty-five-pixels {
+
+    background-position: 265px !important;
+
+}
+
+.two-hundred-seventy-five-pixels {
+
+    background-position: 275px !important;
+
+}
+
+.two-hundred-ninety-pixels {
+
+    background-position: 290px !important;
+
+}
+
+.two-hundred-ninety-five-pixels {
+
+    background-position: 295px !important;
+
+}
+
+.three-hundred-pixels {
+
+    background-position: 300px !important;
+
+}
+
+.three-hundred-ten-pixels {
+
+    background-position: 310px !important;
+
+}
+
+.three-hundred-fifteen-pixels {
+
+    background-position: 315px !important;
+
+}
+
+.three-hundred-twenty-five-pixels {
+
+    background-position: 325px !important;
+
+}
+
+.three-hundred-fourty-five-pixels {
+
+    background-position: 345px !important;
+
+}
+
+.three-hundred-sixty-pixels {
+
+    background-position: 360px !important;
+
+}
+
+.three-hundred-ninety-pixels {
+
+    background-position: 390px !important;
+
+}
+
+.four-hundred-pixels {
+
+    background-position: 400px !important;
+
+}
+
+.four-hundred-fifteen-pixels {
+
+    background-position: 415px !important;
+
+}
+
+.four-hundred-thirty-pixels {
+
+    background-position: 430px !important;
+
+}
+
+.four-hundred-forty-pixels {
+
+    background-position: 440px !important;
+
+}
+
+.four-hundred-seventy-pixels {
+
+    background-position: 470px !important;
+
+}
+
+.five-hundred-forty-pixels {
+
+    background-position: 540px !important;
+
+}
